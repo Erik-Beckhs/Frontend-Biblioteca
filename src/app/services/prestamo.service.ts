@@ -42,4 +42,9 @@ export class PrestamoService {
     let url = `${base_url}/api/prestamos/${prestamo.id}`;
     return this.http.put(url, prestamo)
   }
+
+  savePrestamo(prestamo:any){
+    let url = `${base_url}/api/prestamos`;
+    return this.http.post(url, prestamo)
+  }
 }

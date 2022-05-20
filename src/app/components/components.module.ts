@@ -36,6 +36,7 @@ import { Reporte1Component } from './reporte1/reporte1.component';
 import { Reporte2Component } from './reporte2/reporte2.component';
 import { PrestamoComponent } from './prestamo/prestamo.component';
 
+
 @NgModule({
   declarations: [
     NavbarComponent,

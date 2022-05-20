@@ -19,6 +19,11 @@ export class LibroService {
     return this.http.get(url);
   }
 
+  getLibrosSinPrestamo(){
+    let url = `${base_url}/api/libros_sin_prestamo`;
+    return this.http.get(url);
+  }
+
   getlibro(idLibro:any){
    let url = `${base_url}/api/libros/${idLibro}`;
    return this.http.get(url);
