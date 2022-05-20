@@ -1,0 +1,77 @@
+<div class="container mt-4">
+    <div class="card principal" class="d-flex justify-content-center" style="
+    flex-flow: wrap;">
+        <a [routerLink]="['/principal/autores']" >
+            <mat-card class="example-card bg-success">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-user fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Autores</mat-card-title>
+                        <mat-card-subtitle class="text-white">Permite gestionar la informacion de autores de libros</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>    
+        </a>
+    
+        <a [routerLink]="['/principal/clientes']">
+            <mat-card class="example-card bg-info">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-users fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Clientes</mat-card-title>
+                        <mat-card-subtitle class="text-white">Permite gestionar la informacion de clientes.</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>
+        </a>
+    
+        <a [routerLink]="['/principal/libros']">
+            <mat-card class="example-card bg-warning">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-book fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Libros</mat-card-title>
+                        <mat-card-subtitle class="text-white">Permite gestionar la informacion de libros</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>
+        </a>
+    
+        <a [routerLink]="['/principal/prestamos']">
+            <mat-card class="example-card bg-dark">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-list fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Prestamos</mat-card-title>
+                        <mat-card-subtitle class="text-white">Permite la gestion de información de libros como ser prestamos y devoluciones</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>
+        </a>
+    
+        <a [routerLink]="['/principal/reportes']">
+            <mat-card class="example-card bg-danger">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-chart-bar fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Reportes</mat-card-title>
+                        <mat-card-subtitle class="text-white">Muestra los reportes de clientes, libros y prestamos</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>
+        </a>
+
+    </div>
+</div>
+
+

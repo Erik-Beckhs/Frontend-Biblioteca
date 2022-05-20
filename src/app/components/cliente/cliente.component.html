@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+    <mat-card-subtitle>Cliente</mat-card-subtitle>
+    <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar(f.value)">
+    <mat-card-content>
+      <p>Datos del Cliente</p>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input id="name" name="name" matInput [(ngModel)]="cliente.name">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput id="email" name="email" matInput [(ngModel)]="cliente.email">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Celular</mat-label>
+                <input matInput id="celular" name="celular" matInput [(ngModel)]="cliente.celular">
+              </mat-form-field>
+        
+
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-end">
+      <button type="button" mat-dialog-close mat-raised-button color="secondary">Cancelar</button>
+      <button type="submit" mat-raised-button color="primary">Guardar</button>
+    </mat-card-actions>
+    </form>
+  </mat-card>

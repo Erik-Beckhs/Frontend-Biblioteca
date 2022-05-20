@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <div class="card principal" class="d-flex justify-content-center" style="
+    flex-flow: wrap;">
+        <a [routerLink]="['/principal/reporte1']" >
+            <mat-card class="example-card bg-success">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-book fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Libros Vencidos</mat-card-title>
+                        <mat-card-subtitle class="text-white">Muestra la lista de clientes con libros vencidos</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>    
+        </a>
+    
+        <a [routerLink]="['/principal/reporte2']">
+            <mat-card class="example-card bg-info">
+                <div class="row">
+                    <div class="col-4 p-2 text-center icono-card">
+                        <i class="fa fa-list fa-5x text-white"></i>
+                    </div>
+                    <div class="col-8 p-2 content-card">
+                        <mat-card-title class="text-white">Prestamos Segmentados</mat-card-title>
+                        <mat-card-subtitle class="text-white">Muestra la lista de prestamos segmentados por semana y por mes</mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card>
+        </a>
+
+        
+        </div>
+        <div class="d-flex justify-content-start">
+            <button mat-raised-button color="warn" [routerLink]="['/principal']">
+                <mat-icon>backspace</mat-icon>
+                <span class="ms-1">Volver</span>
+            </button>
+        </div>
+    </div>

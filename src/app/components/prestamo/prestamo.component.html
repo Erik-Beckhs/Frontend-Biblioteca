@@ -1,0 +1,128 @@
+<div class="container mt-4 p-3 border">
+    <div class="cabecera">
+        <h2>Registrar Prestamo</h2>
+        <p class="text-muted">
+            A continuación ingrese informacion del cliente, los libros a prestar y la cantidad de dias de prestamo, tenga en cuenta que solo puede prestar 5 libros a un usuario y la cantidad maxima de dias a prestar es de 10
+        </p>
+    </div>
+    <form action="">
+        <div class="cliente border p-2">
+            <form #f="ngForm" ngSubmit="regCliente(f.value)">
+                <p class="h5 text-left ms-5">
+                    Cliente
+                </p>
+                <hr>
+                <div class="d-flex justify-content-around">
+                    <div class="example-container">
+                        <mat-form-field class="mx-2" hintLabel="Max 10 characters" appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input required matInput placeholder="Ex. Erik Maquera">
+                        </mat-form-field>
+                    
+                        <mat-form-field class="mx-2" hintLabel="Max 10 characters" appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input required type="email" matInput  placeholder="Ex. erikmaquera@gmail.com">
+                        </mat-form-field>
+    
+                        <mat-form-field class="mx-2" hintLabel="Max 10 characters" appearance="fill">
+                            <mat-label>Celular</mat-label>
+                            <input required type="number" matInput maxlength="10" placeholder="Ex. 61216696">
+                        </mat-form-field>
+                    </div>
+                    
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" mat-raised-button class="mx-2" color="primary" (click)="selCliente()">
+                        <mat-icon>search</mat-icon>
+                        <span class="mx-1">Seleccionar</span>
+                    </button>
+                    <button type="button" mat-raised-button class="mx-2" color="primary">
+                        <mat-icon>add</mat-icon>
+                        <span class="mx-1">Nuevo</span>
+                    </button>
+                    <button type="submit" mat-raised-button class="mx-2" color="primary">
+                        <mat-icon>save</mat-icon>
+                        <span class="mx-1">Guardar</span>
+                    </button>
+                    <button type="button" mat-raised-button class="mx-2" color="primary">
+                        <mat-icon>brush</mat-icon>
+                        <span class="mx-1">Limpiar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="libros border p-2 my-4">
+            <div class="d-flex justify-content-between my-2">
+                <p class="h5 text-left ms-5">
+                    Libros
+                </p>
+                <button mat-raised-button class="mx-2" color="accent">
+                    <mat-icon>add</mat-icon>
+                    <span class="mx-1">Agregar Libro</span>
+                </button>
+            </div>
+            <div class="p-2">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="#">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let i=index"> {{i+1}} </td>
+                    </ng-container>
+                
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="titulo">
+                    <th mat-header-cell *matHeaderCellDef> Titulo </th>
+                    <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+                    </ng-container>
+                
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="autor_id">
+                    <th mat-header-cell *matHeaderCellDef> Autor </th>
+                    <td mat-cell *matCellDef="let element"> {{element.autor_id}} </td>
+                    </ng-container>
+                
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="lote">
+                    <th mat-header-cell *matHeaderCellDef> Lote </th>
+                    <td mat-cell *matCellDef="let element"> {{element.lote}} </td>
+                    </ng-container>
+        
+                    <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Quitar </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        <button mat-mini-fab color="warn">
+                            <mat-icon>close</mat-icon>
+                        </button>    
+                    </td>
+                </ng-container>
+                
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+        </div>
+        <div class="prestamo border p-3">
+            <div class="d-flex justify-content-between">
+                <mat-form-field class="mx-2" hintLabel="Max 10 characters" appearance="fill" style="width:400px;">
+                    <mat-label>Dias de Prestamo</mat-label>
+                    <input required type="number" matInput maxlength="10">
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button class="mx-2" color="primary">
+                        <mat-icon>brush</mat-icon>
+                        <span class="mx-1">Limpiar Todo</span>
+                    </button>
+                    <button mat-raised-button class="mx-2" color="primary">
+                        <mat-icon>save</mat-icon>
+                        <span class="mx-1">Realizar Prestamo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
